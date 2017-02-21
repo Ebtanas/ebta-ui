@@ -1,0 +1,64 @@
+/* DO NOT TOUCH THE FLEX */
+
+html {
+  height: 100%;
+}
+
+#reactive {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding:27px;
+  width: 997px;
+}
+
+.body {
+  flex: 1;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+hr.style14 {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #c5c5c5, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #c5c5c5, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #c5c5c5, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #c5c5c5, #f0f0f0);
+}
+
+/* CUSTOMIZATION HERE */
+
+.form-select {
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 0.4rem !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0.4rem !important;
+}
+
+.tab {
+  border-bottom: none !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.aligncenter {text-align: center}
+.xmargin-10 {margin-top: -8px}
+
+/* COMMON PAGE */
+
+
+/* PROBLEM SETS PAGE */
+
+.masonry-layout {
+  column-count: 3;
+  column-gap: 0;
+}
+.masonry-layout-panel {
+  break-inside: avoid;
+  padding: 1rem;
+}

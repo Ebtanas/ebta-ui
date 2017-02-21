@@ -1,4 +1,5 @@
 resources/public/js
+resources/public/spectre.css
 target
 *.log
 *.idea
