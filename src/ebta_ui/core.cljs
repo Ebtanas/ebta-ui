@@ -10,19 +10,19 @@
                :top-nav [{:title "Halaman Utama"
                           :active true
                           :url "#"
-                          :icon "icon-library_books"}
+                          :icon "icon-home"}
                          {:title "Koleksi Soal"
                           :active false
                           :url "#"
-                          :icon "icon-people"}
+                          :icon "icon-library_books"}
                          {:title "Daftar Anggota"
                           :active false
                           :url "#"
-                          :icon "icon icon-exit_to_app"}
+                          :icon "icon-people"}
                          {:title "Masuk"
                           :active false
                           :url "#"
-                          :icon "Masuk"}]
+                          :icon "icon-exit_to_app"}]
                :bottom-nav [{:title "Kebijakan Privasi"
                              :url "#"}
                             {:title "Contekan"
@@ -70,7 +70,7 @@
         (dom/a #js {:className "navbar-brand"
                     :href "#"}
           (dom/i #js {:className "icon icon-pages"})
-          "Ebtanas"))
+          (str " " (get-in app-data [:title]))))
       (dom/section #js {:className "navbar-section"}
         (dom/ul #js {:className "tab inline-flex"}
           (map nav-item (get-in app-data [:top-nav])))))))
