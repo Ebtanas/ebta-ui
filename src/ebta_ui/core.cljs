@@ -3,7 +3,8 @@
             [goog.string :as gstring]
             [om.next :as om :refer-macros [defui]]
             [om.dom :as dom]
-            [ebta-ui.app-data :refer [app-data]]))
+            [ebta-ui.app-data :refer [app-data]]
+            [ebta-ui.parser :as p]))
 
 (enable-console-print!)
 
@@ -72,7 +73,8 @@
       (footer))))
 
 (def reconciler
-  (om/reconciler {:state app-data}))
+  (om/reconciler {:state app-data
+                  :parser (om/parser {:read p/read})}))
 
 (om/add-root! reconciler
               Root (gdom/getElement "app"))
