@@ -10,9 +10,10 @@
      :figwheel true
      :source-paths ["src"]
      :compiler {:main 'ebta-ui.core
-                :asset-path "js"
-                :output-to "resources/public/js/main.js"
-                :output-dir "resources/public/js"
-                :verbose true}}]})
+                :asset-path "js/compiled/out"
+                :output-to "resources/public/js/compiled/main.js"
+                :output-dir "resources/public/js/compiled/out"
+                :optimizations :none
+                :source-map-timestamp true}}]})
 
 (ra/cljs-repl)
