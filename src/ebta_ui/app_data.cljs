@@ -33,21 +33,22 @@
                       :copyright {:copy "Hak Cipta"
                                   :year 2017
                                   :by "Indonesia"}
-                      :search/placeholder "Cari di sini..."
-                      :subjects [{:subject/name "Matematika"}
-                                 {:subject/name "B. Indonesia"}
-                                 {:subject/name "B. Inggris"}
-                                 {:subject/name "Fisika"}
-                                 {:subject/name "Kimia"}
-                                 {:subject/name "Biologi"}
-                                 {:subject/name "Sosiologi"}
-                                 {:subject/name "Geografi"}
-                                 {:subject/name "Ekonomi"}
-                                 {:subject/name "Sejarah"}]
-                      :messages [{:message/quote "Any fool can make something complicated. It takes a genius to make it simple"
-                                  :message/author "Woody Guthrie"}
-                                 {:message/quote "The important thing is not to stop questioning. Curiosity has its own reason for existing."
-                                  :message/author "Albert Einstein"}]
+                      :home-page {:title "Ebtanas"
+                                  :search/placeholder "Cari di sini..."
+                                  :subjects [{:subject/name "Matematika"}
+                                             {:subject/name "B. Indonesia"}
+                                             {:subject/name "B. Inggris"}
+                                             {:subject/name "Fisika"}
+                                             {:subject/name "Kimia"}
+                                             {:subject/name "Biologi"}
+                                             {:subject/name "Sosiologi"}
+                                             {:subject/name "Geografi"}
+                                             {:subject/name "Ekonomi"}
+                                             {:subject/name "Sejarah"}]
+                                  :messages [{:message/quote "Any fool can make something complicated. It takes a genius to make it simple"
+                                              :message/author "Woody Guthrie"}
+                                             {:message/quote "The important thing is not to stop questioning. Curiosity has its own reason for existing."
+                                              :message/author "Albert Einstein"}]}
                       :login-page {:url "/lojin"
                                    :title "Lojin!"
                                    :form {:title "Lojin!"

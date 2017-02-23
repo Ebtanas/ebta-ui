@@ -64,7 +64,7 @@
 (defui Home
   static om/IQuery
   (query [this]
-    '[:search/placeholder :subjects :messages])
+    '[:home-page])
   Object
   (render [this]
     (let [{:keys [:search/placeholder :subjects :messages]} (om/props this)]

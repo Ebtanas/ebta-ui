@@ -22,7 +22,7 @@
                        {:subject/name "Geografi"}
                        {:subject/name "Ekonomi"}
                        {:subject/name "Sejarah"}]}
-           (parser-tester {:state init-data} '[:subjects])))
+           (parser-tester {:state init-data} '[{:home-page [:subjects]}])))
     (is (= {:copyright {:copy "Hak Cipta" :year 2017 :by "Indonesia"}}
            (parser-tester {:state init-data} '[:copyright]))))
   (testing "Get nav-menu/item by range."
@@ -30,7 +30,7 @@
                               :nav-menu/name "Halaman Utama"
                               :active true
                               :icon "icon-home"
-                              :url "#"}
+                              :url "/"}
                              {:nav-menu/id 2
                               :nav-menu/name "Bank Soal"
                               :active false
@@ -45,7 +45,7 @@
                               :nav-menu/name "Lojin"
                               :active false
                               :icon "icon-exit_to_app"
-                              :url "#"}]}
+                              :url "/lojin"}]}
            (parser-tester {:state init-data} '[(:nav-menu/by-id {:start 1 :end 4})])))
     (is (= {:nav-menu/by-id [{:nav-menu/id 5
                               :nav-menu/name "Kebijakan Privasi"

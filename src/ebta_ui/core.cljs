@@ -26,10 +26,10 @@
     (let [{:keys [title copyright] :as env} (om/props this)
           menus (:nav-menu/by-id env)]
       (dom/div #js {:id "reactive"}
-        ;(pprint env)
+        (pprint env)
         (header title (subvec menus 0 4))
-        (ln/login (:login-page env))
-        ;(hm/home env)
+        ;(ln/login (:login-page env))
+        (hm/home (:home-page env))
         (footer copyright (subvec menus 4 7))))))
 
 (def reconciler
