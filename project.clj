@@ -9,7 +9,17 @@
             [lein-figwheel "0.5.9"]
             [lein-doo "0.1.7"]]
   :figwheel {:css-dirs ["resources/public/css"]}
-  :cljsbuild {:builds [{:id "test"
+  :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"]
+  :cljsbuild {:builds [{:id "dev"
+                        :figwheel true
+                        :source-paths ["src"]
+                        :compiler {:main 'ebta-ui.core
+                                   :asset-path "js/compiled/out"
+                                   :output-to "resources/public/js/compiled/main.js"
+                                   :output-dir "resources/public/js/compiled/out"
+                                   :optimizations :none
+                                   :source-map-timestamp true}}
+                       {:id "test"
                         :source-paths ["src" "test"]
                         :compiler {:main 'ebta-ui.test-runner
                                    :output-to "resources/public/js/compiled/testing_test.js"

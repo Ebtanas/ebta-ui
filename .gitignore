@@ -1,4 +1,4 @@
-resources/public/js
+resources/public/js/compiled
 resources/public/spectre.css
 target
 *.log
