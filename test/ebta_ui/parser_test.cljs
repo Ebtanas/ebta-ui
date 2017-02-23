@@ -23,9 +23,6 @@
                        {:subject/name "Ekonomi"}
                        {:subject/name "Sejarah"}]}
            (parser-tester {:state init-data} '[:subjects])))
-    (is (= {:messages [{:message/quote "Any fool can make something complicated. It takes a genius to make it simple"
-                        :message/author "Woody Guthrie"}]}
-           (parser-tester {:state init-data} '[:messages])))
     (is (= {:copyright {:copy "Hak Cipta" :year 2017 :by "Indonesia"}}
            (parser-tester {:state init-data} '[:copyright]))))
   (testing "Get nav-menu/item by range."

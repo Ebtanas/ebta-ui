@@ -16,7 +16,4 @@
   (let [st (key @state)]
     (if params
       {:value (into [] (map get-nav-item (repeat st) (range start (inc end))))}
-      {:value st})))
-
-
-;
+      {:value (into [] (map get-nav-item (repeat st) (range 1 (inc (count st)))))})))

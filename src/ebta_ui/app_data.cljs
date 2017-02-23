@@ -42,7 +42,9 @@
                                  {:subject/name "Ekonomi"}
                                  {:subject/name "Sejarah"}]
                       :messages [{:message/quote "Any fool can make something complicated. It takes a genius to make it simple"
-                                  :message/author "Woody Guthrie"}]
+                                  :message/author "Woody Guthrie"}
+                                 {:message/quote "The important thing is not to stop questioning. Curiosity has its own reason for existing."
+                                  :message/author "Albert Einstein"}]
                       :copyright {:copy "Hak Cipta"
                                   :year 2017
                                   :by "Indonesia"}}))
