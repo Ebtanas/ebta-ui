@@ -1,7 +1,6 @@
 (ns ebta-ui.app-data)
 
 (def init-data (atom {:title "Ebtanas"
-                      :search/placeholder "Cari di sini..."
                       :nav-menu/by-id {1 {:nav-menu/id 1
                                           :nav-menu/name "Halaman Utama"
                                           :active true
@@ -31,6 +30,10 @@
                                        7 {:nav-menu/id 7
                                           :nav-menu/name "Misi Ebtanas"
                                           :url "#"}}
+                      :copyright {:copy "Hak Cipta"
+                                  :year 2017
+                                  :by "Indonesia"}
+                      :search/placeholder "Cari di sini..."
                       :subjects [{:subject/name "Matematika"}
                                  {:subject/name "B. Indonesia"}
                                  {:subject/name "B. Inggris"}
@@ -45,12 +48,9 @@
                                   :message/author "Woody Guthrie"}
                                  {:message/quote "The important thing is not to stop questioning. Curiosity has its own reason for existing."
                                   :message/author "Albert Einstein"}]
-                      :copyright {:copy "Hak Cipta"
-                                  :year 2017
-                                  :by "Indonesia"}
                       :login-page {:url "/lojin"
                                    :title "Lojin!"
-                                   :form {:title "Lojin"
+                                   :form {:title "Lojin!"
                                           :email {:label1 "Email"
                                                   :placeholder "pevitaPearce@gmail.com"}
                                           :password {:label1 "Password"
