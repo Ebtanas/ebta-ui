@@ -1,6 +1,6 @@
-(ns ebta-ui.view.home
-  (:require [goog.dom :as gdom]
-            [goog.string :as gstring]
+(ns ebta-ui.views.home
+  (:require [goog.string :as gstring]
+            [om.next :as om :refer-macros [defui]]
             [om.dom :as dom]))
 
 (defn nav-item
@@ -34,6 +34,18 @@
       (dom/ul #js {:className "tab inline-flex"}
         (map nav-item top-nav-menus)))))
 
+(defn footer [copyright bottom-nav-menus]
+  (let [{:keys [copy year by]} copyright]
+    (dom/footer #js {:className "aligncenter"}
+      (dom/hr #js {:className "style14"})
+      (dom/div nil
+        (dom/ul #js {:className "tab inline-flex"}
+                (map nav-item bottom-nav-menus)))
+      (dom/div #js {:className "xmargin-10"}
+        (dom/span nil
+          (str (gstring/unescapeEntities "&copy; ")
+               (str copy " " year " - " by)))))))
+
 (defn home-body [subjects placeholder messages]
   (dom/section #js {:className "body section columns"}
     (dom/div #js {:className "container"}
@@ -49,14 +61,13 @@
               (dom/span #js {:className "icon icon-search"})))))
       (quote-msg messages))))
 
-(defn footer [copyright bottom-nav-menus]
-  (let [{:keys [copy year by]} copyright]
-    (dom/footer #js {:className "aligncenter"}
-      (dom/hr #js {:className "style14"})
-      (dom/div nil
-        (dom/ul #js {:className "tab inline-flex"}
-                (map nav-item bottom-nav-menus)))
-      (dom/div #js {:className "xmargin-10"}
-        (dom/span nil
-          (str (gstring/unescapeEntities "&copy; ")
-               (str copy " " year " - " by)))))))
+(defui Home
+  static om/IQuery
+  (query [this]
+    '[:search/placeholder :subjects :messages])
+  Object
+  (render [this]
+    (let [{:keys [:search/placeholder :subjects :messages]} (om/props this)]
+      (home-body subjects placeholder messages))))
+
+(def home (om/factory Home))

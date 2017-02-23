@@ -1,11 +1,12 @@
-(ns ebta-ui.parser)
+(ns ebta-ui.parser
+  (:require [om.next :as om]))
 
 (defn- get-nav-item [st id] (get st id))
 
-(defmulti read (fn [env key params] key))
+(defmulti read om/dispatch)
 
 (defmethod read :default
-  [{:keys [state] :as env} key params]
+  [{:keys [state parser query] :as env} key params]
   (let [st @state]
     (if-let [[_ value] (find st key)]
       {:value value}

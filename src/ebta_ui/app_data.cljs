@@ -48,5 +48,14 @@
                       :copyright {:copy "Hak Cipta"
                                   :year 2017
                                   :by "Indonesia"}
-                      :login-page {:url "/lojin"}}))
+                      :login-page {:url "/lojin"
+                                   :title "Lojin!"
+                                   :form {:title "Lojin"
+                                          :email {:label1 "Email"
+                                                  :placeholder "pevitaPearce@gmail.com"}
+                                          :password {:label1 "Password"
+                                                     :placeholder "************"}
+                                          :remember-me {:label2 "Remember me!"}
+                                          :submit-btn {:label2 "Lojin!"}
+                                          :forgot-pwd {:label2 "Lupa password?"}}}}))
 
