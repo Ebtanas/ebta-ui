@@ -6,7 +6,7 @@
                                           :nav-menu/name "Halaman Utama"
                                           :active true
                                           :icon "icon-home"
-                                          :url "#"}
+                                          :url "/"}
                                        2 {:nav-menu/id 2
                                           :nav-menu/name "Bank Soal"
                                           :active false
@@ -21,7 +21,7 @@
                                           :nav-menu/name "Lojin"
                                           :active false
                                           :icon "icon-exit_to_app"
-                                          :url "#"}
+                                          :url "/lojin"}
                                        5 {:nav-menu/id 5
                                           :nav-menu/name "Kebijakan Privasi"
                                           :url "#"}
@@ -47,4 +47,6 @@
                                   :message/author "Albert Einstein"}]
                       :copyright {:copy "Hak Cipta"
                                   :year 2017
-                                  :by "Indonesia"}}))
+                                  :by "Indonesia"}
+                      :login-page {:url "/lojin"}}))
+
